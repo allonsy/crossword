@@ -6,14 +6,6 @@
 import re
 import sys
 
-def remPunc(word):
-    ret=""
-    for c in word:
-        if(c.isalpha()):
-            ret+=c.lower()
-        elif(c.isnumeric()):
-            ret+=c.lower()
-    return ret
 
 
 #read in database:
@@ -21,7 +13,8 @@ words=[]
 
 fil=open("dict.db", "r")
 for word in fil:
-    words.append(word.lower())
+    word=word[:len(word)-1]
+    words.append(word)
 
 for arg in sys.argv:
     if(arg=="./crossword.py"):
@@ -29,7 +22,6 @@ for arg in sys.argv:
     print("Results for word: "+arg)
     pat=re.compile('^'+arg+'$')
     for wd in words:
-        wd=remPunc(wd)
         mat=pat.match(wd)
         if(mat):
             print(wd)
