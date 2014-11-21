@@ -25,4 +25,6 @@ Don't forget to encapsulate your word with quotes otherwise your shell may exapa
 
 Don't forget to download the dict.db file from the github
 
+Feel free to add to the dictionary file. Make sure that each word is on its own line. If you do add words, make all the letters lowercase and remove any punctutation so that the pattern matcher can correctly match words and not miss any by accident.
+
 Questions? Bugs? email me at linuxbash8@gmail.com
