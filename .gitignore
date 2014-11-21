@@ -1,0 +1,7 @@
+#exclusions
+*~
+updater.py
+orig.db
+__*
+updateDict.py
+
